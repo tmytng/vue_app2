@@ -1,4 +1,5 @@
 <%= form_with model: @to_do, local: true do |f| %>
-<%= f.text_field :title %>
-<%= f.submit %>
+ <%= f.text_field :title %>
+ <%= f.datetime_field :expired_at %>
+ <%= f.submit %>
 <% end %>
