@@ -18,7 +18,9 @@
     </el-table-column>
   </el-table>
 </template>
+
 <script>
+import axios from 'axios'
   export default {
     data() {
       return {
