@@ -1,6 +1,4 @@
 <h1>post-edit</h1>
 
-<%= form_with model: @to_do, local: true do |f| %>
-<%= f.text_field :title %>
-<%= f.submit %>
-<% end %>
+<%= render 'form' %>
+

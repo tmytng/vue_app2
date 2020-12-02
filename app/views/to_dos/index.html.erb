@@ -1,5 +1,5 @@
 <h1>test</h1>
 
 <% @to_dos.each do |to_do| %>
-<p><%= to_do.title %></p>
+ <%= link_to to_do.title, to_do_path(to_do),  method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %>
 <% end %>

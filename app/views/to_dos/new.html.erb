@@ -1,7 +1,2 @@
-<h1>postnew</h1>
-
-<%= form_with model: @to_do, local: true  do |f| %>
- <%= f.label :title %>
- <%= f.text_field :title %>
- <%= f.submit %>
-<% end %>
+<h1>post-new</h1>
+<%= render 'form' %>
