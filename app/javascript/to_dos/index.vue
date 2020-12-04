@@ -61,7 +61,7 @@ import {reject, filter} from 'lodash';
         });
       },
       updateToDo(id, finished) {
-        axios.patch('/api/v1/to_dos/' + id, {to_do: {finished: finished}})
+        axios.patch('/api/v1/to_dos/' + id, {to_do: {to_do: toDo}})
           .then(res => {
             if (res.status === 200) {
               console.log(res)
