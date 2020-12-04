@@ -2,10 +2,16 @@
   <div id="app">
     <el-tabs v-model="activeName">
       <el-tab-pane label="ToDo" name="toDo">
-        <to-do-table v-bind:to-dos="filter(toDos, false)"></to-do-table>
-      </el-tab-pane>
+        <to-do-table
+          v-bind:to-dos="filter(toDos, false)"
+          @update="updateToDo"
+          @destroy="destroyToDo"></to-do-table>
+        </el-tab-pane>
       <el-tab-pane label="終了したToDo" name="finishedToDo">
-        <to-do-table v-bind:to-dos="filter(toDos, true)"></to-do-table>
+        <to-do-table
+          v-bind:to-dos="filter(toDos, true)"
+          @update="updateToDo"
+          @destroy="destroyToDo"></to-do-table>
       </el-tab-pane>
     </el-tabs>
   </div>
