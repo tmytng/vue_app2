@@ -12,9 +12,9 @@ class ToDosController < ApplicationController
   def create
     @to_do = ToDo.new(to_do_params)
     if @to_do.save
-      redirect_to to_dos_url
+      render status: :created
     else
-      render :new
+      render status: 400, json: { status: 400, message: 'ToDoの作成に失敗しました' }
     end
   end
 
@@ -37,7 +37,7 @@ class ToDosController < ApplicationController
 private
 
   def to_do_params
-    params.require(:to_do).permit(:title, :expired_at)
+    params.require(:to_do).permit(:title, :expired_at, :finished)
   end
 
   def set_to_do
