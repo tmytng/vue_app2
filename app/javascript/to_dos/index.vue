@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
     <el-row>
       <el-button
         icon="el-icon-plus"
